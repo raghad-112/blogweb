@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+
+{% block title %}Comments{% endblock %}
+
+{% block content %}
+    <h2>List of Comments</h2>
+    <ul>
+        {% for comment in comments_list %}
+            <li>{{ comment.content }} - post ID: {{comment.post.id }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
